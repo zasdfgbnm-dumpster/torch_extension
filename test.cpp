@@ -8,9 +8,8 @@ class string_view final {
  public:
   static constexpr int npos = int(-1);
 
-  constexpr int find() const noexcept {
-    substr_(1).equals_(substr_(1));
-    return 0;
+  constexpr bool test() const noexcept {
+    return substr_(1).equals_(substr_(1));
   }
   constexpr string_view substr_(int pos = 0, int count = npos)
       const {
@@ -26,5 +25,5 @@ class string_view final {
 };
 
 int main() {
-  constexpr auto x = string_view().find();
+  constexpr auto x = string_view().test();
 }
