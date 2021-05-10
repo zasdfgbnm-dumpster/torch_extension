@@ -1,4 +1,4 @@
-#include <torch/extension.h>
+#include <torch/library.h>
 
 struct CuaevComputer : torch::CustomClassHolder {};
 
