@@ -1,7 +1,17 @@
-#include <torch/custom_class.h>
+template <class CurClass>
+class class_;
 
-struct CuaevComputer : torch::CustomClassHolder {};
+class Library final {
+public:
+  template <class CurClass>
+  inline class_<CurClass> class_() {}
+};
 
-void f(torch::Library& m) {
-  m.class_<CuaevComputer>("CuaevComputer");
+template <class CurClass>
+class class_ {};
+
+struct CuaevComputer {};
+
+int main() {
+  Library().class_<CuaevComputer>();
 }
