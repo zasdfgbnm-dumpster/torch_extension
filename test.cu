@@ -1,7 +1,7 @@
-#include <torch/library.h>
+#include <torch/custom_class.h>
 
 struct CuaevComputer : torch::CustomClassHolder {};
 
-TORCH_LIBRARY(cuaev, m) {
+void f(torch::Library& m) {
   m.class_<CuaevComputer>("CuaevComputer");
 }

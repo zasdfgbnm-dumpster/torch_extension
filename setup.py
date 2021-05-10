@@ -5,7 +5,7 @@ setup(
     name='test',
     ext_modules=[
         CUDAExtension('test', [
-            'test.cu',
+            'test.cpp',
         ]),
     ],
     cmdclass={

@@ -1,8 +1,10 @@
 #!/bin/bash
 set -eux
 
+clear
+cp test.cu test.cpp
+
 python setup.py install --user
 
-cp test.cu test.cpp
-g++ test.cpp
-nvcc test.cu
+# g++ test.cpp
+# nvcc test.cu
