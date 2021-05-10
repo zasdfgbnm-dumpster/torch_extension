@@ -1,5 +1,6 @@
 #!/bin/bash
-set -eux
+
+set -e
 
 clear
 cp test.cu test.cpp
@@ -8,6 +9,9 @@ cp test.cu test.cpp
 
 echo "******************** gcc ********************"
 g++ test.cpp
+
+echo
+echo
 
 echo "******************** nvcc ********************"
 nvcc test.cu
